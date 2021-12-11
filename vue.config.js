@@ -1,7 +1,18 @@
 module.exports = {
-    lintOnSave: false,
+  lintOnSave: false,
 
-    transpileDependencies: [
-      'vuetify'
-    ]
+  transpileDependencies: [
+    'vuetify'
+  ],
+
+  pluginOptions: {
+    i18n: {
+      locale: 'ru',
+      fallbackLocale: 'en',
+      localeDir: 'locales',
+      enableInSFC: true,
+      includeLocales: false,
+      enableBridge: true
+    }
+  }
 }
