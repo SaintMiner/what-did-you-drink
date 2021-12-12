@@ -30,6 +30,7 @@
                 v-model="selected"
                 :label="$t(drink.label)"
                 :value="drink.value"
+                :disabled="isSendingDrinks"
               ></v-checkbox>
             </v-list-item-content>
           </v-list-item>
@@ -117,7 +118,7 @@ export default {
         } else {
           this.isSuccess = true;
         }
-      }, 0);
+      }, 2000);
     },
   },
 };
