@@ -1,0 +1,26 @@
+[
+    {
+      "label": "Water",
+      "value": "water"
+    },
+    {
+      "label": "Coffee",
+      "value": "coffee"
+    },
+    {
+      "label": "Latte",
+      "value": "Latte"
+    },
+    {
+      "label": "Tea",
+      "value": "tea"
+    },
+    {
+      "label": "Alcohol",
+      "value": "alcohol"
+    },
+    {
+        "label": "Energy drink",
+        "value": "energy_drink"
+    }
+  ]

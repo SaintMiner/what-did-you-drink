@@ -3,11 +3,19 @@
   "Latte": "Латте",
   "Water": "Вода",
   "Alcohol": "Алкашка",
+  "Energy drink": "Энергетик",
   "Tea": "Чай",
   "Send": "Отправить",
   "What did you drink today?": "Что Вы сегодня пили?",
-  "You died of dehydration": "Вы умерли от обезвоживания",
+  "You died of dehydration?": "Вы умерли от обезвоживания?",
   "Close": "Закрыть",
   "Well done!": "Молодец!",
-  "I am not satisfied...": "Я недоволен..."
+  "I am not satisfied...": "Я недоволен...",
+  "Language": "Язык",
+  "Result": "Рузультат",
+  "Did you drink today?": "Вы сегодня пили?",
+  "Yes": "Да",
+  "No": "Нет",
+  "Go drink some water": "Пойди попей воды",
+  "Repeat": "Повторить"
 }
