@@ -78,18 +78,27 @@
             </v-stepper-content>
 
             <v-stepper-content step="3">
-              <div v-if="isSuccess" class="mx-auto text-center green--text">
+              <div v-if="isSuccess" class="mx-auto text-center success--text">
                 <v-icon style="font-size: 100pt" color="success">
                   mdi-emoticon-happy-outline
                 </v-icon>
                 <h1>{{ $t("Well done!") }}</h1>
+                <p v-if="hasEnergyDrink" class="subtitle-1 warning--text"> {{ $t("But can be better") }} </p>
               </div>
-              <div v-if="isFailure" class="mx-auto text-center red--text">
+              
+              <div v-if="hasEnergyDrink && isFailure" class="mx-auto text-center">
+                <v-icon style="font-size: 100pt">
+                  mdi-skull-crossbones-outline
+                </v-icon>
+                <h1> {{ $t("Your heart cannot stand the overload and you died") }} </h1>
+              </div>
+              <div v-else-if="isFailure" class="mx-auto text-center error--text">
                 <v-icon style="font-size: 100pt" color="error">
                   mdi-emoticon-sad-outline
                 </v-icon>
-                <h1>{{ $t("I am not satisfied...") }}</h1>
+                <h1> {{ $t("I am not satisfied...") }} </h1>
               </div>
+
               <div
                 v-if="isNeedsDrink"
                 class="mx-auto text-center warning--text"
@@ -150,6 +159,7 @@ export default {
       isSendingDrinks: false,
       isSuccess: false,
       isFailure: false,
+      hasEnergyDrink: false,
     };
   },
 
@@ -160,9 +170,13 @@ export default {
         this.isSendingDrinks = false;
         this.isSuccess = false;
         this.isFailure = false;
+        if (this.selected.includes("energy_drink")) {
+          this.hasEnergyDrink = true;
+        }
         if (!this.selected.length) {
           this.snackbar.text = this.$t("You died of dehydration?");
           this.snackbar.show = true;
+          return;
         } else if (this.selected.includes("alcohol")) {
           this.isFailure = true;
         } else {
