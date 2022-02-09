@@ -4,6 +4,10 @@
       "value": "water"
     },
     {
+      "label": "Juice",
+      "value": "juice"
+    },
+    {
       "label": "Coffee",
       "value": "coffee"
     },
